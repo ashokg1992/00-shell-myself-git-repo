@@ -1,6 +1,7 @@
 
 10 Corporate real-Time Shell Scripts.
 
+-----------------------------------------------------------------------
 1. Backup Script
 Script
 #!/bin/bash
@@ -33,6 +34,7 @@ To run the backup script at regular intervals, use crontab -e to edit the cronta
 This example runs the script every minute. Adjust the schedule as needed.
 
 
+-----------------------------------------------------------------------
 2. Disk Usage Check Script
 Script
 #!/bin/bash
@@ -46,6 +48,8 @@ if [ $usage -ge $THRESHOLD ]; then
 echo "Warning: Disk usage on $partition is at ${usage}%"
 fi
 done
+
+
 Explanation
 • THRESHOLD: Sets the disk usage percentage threshold.
 
@@ -67,6 +71,7 @@ Explanation
 
 
 
+-----------------------------------------------------------------------
 3. Service Health Check Script
 Script
 #!/bin/bash
@@ -88,6 +93,7 @@ Explanation
 • systemctl start $SERVICE: Starts the service if it is not running.
 
 
+-----------------------------------------------------------------------
 4. Network Connectivity Check Script
 Script
 #!/bin/bash
@@ -113,6 +119,7 @@ Explanation
 • echo "$HOST is not reachable" >> $OUTPUT_FILE: Writes to the output file if the host is not reachable.
 
 
+-----------------------------------------------------------------------
 5. Database Backup Script
 Installation
 Install MySQL:
@@ -139,6 +146,7 @@ Explanation
 • echo "Database backup completed: $BACKUP_DIR/$DB_NAME-$DATE.sql" : Outputs a message indicating the completion of the backup.
 
 
+-----------------------------------------------------------------------
 
 6. System Uptime Check Script
 Script
@@ -149,6 +157,7 @@ Explanation
 • uptime -p: Prints the system uptime in a human-readable format.
 
 
+-----------------------------------------------------------------------
 7. Listening Ports Script
 Installation
 Install net-tools:
@@ -162,6 +171,7 @@ Explanation
 
 • grep LISTEN: Filters the output to show only listening ports.
 
+-----------------------------------------------------------------------
 
 8. Automatic Package Updates Script
 Script
@@ -180,6 +190,7 @@ Explanation
 
 • echo "System packages updated and cleaned up" : Outputs a message indicating the completion of the update and cleanup.
 
+-----------------------------------------------------------------------
 
 9. HTTP Response Times Script
 Script
@@ -199,6 +210,7 @@ Explanation
 • echo "Response time for $URL: $RESPONSE_TIME seconds" : Prints the response time for each URL.
 
 
+-----------------------------------------------------------------------
 
 10. Monitor System Processes and Memory Usage
 Script
@@ -214,4 +226,5 @@ Explanation
 • head -n 10: Displays the top 10 processes by memory usage.
 
 
+-----------------------------------------------------------------------
 
