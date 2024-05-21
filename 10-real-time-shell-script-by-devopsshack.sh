@@ -1,8 +1,5 @@
-DevOps Shack
 
 10 Corporate real-Time Shell Scripts.
-
-Click Here To Enrol To Batch-5 | DevOps & Cloud DevOps
 
 1. Backup Script
 Script
