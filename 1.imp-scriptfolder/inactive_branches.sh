@@ -1,6 +1,7 @@
 
 ===================================== ==========================
 -  need to have accepts repo name ,username,password,and it should return branches which are in active since last 2/3 months
+   - we take git repo anme ,c urrent data, last modified datae, etc we need for this
 
 #!/bin/sh
 echo "Enter repo to inactive branches"
@@ -23,3 +24,5 @@ numberofdays=$(( ($presentdate - $last_updated_date_sec)/(60*60*24) ))
      fi
 done
 =============================================================
+
+
