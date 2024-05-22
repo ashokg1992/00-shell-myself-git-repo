@@ -1,8 +1,10 @@
 ======================== ================================
+- to delete dependency innpom.xml based on users input , and also need  report that project name ,dependency delete or not.
+
 !/bin/sh
 for f in $1;
 do
-if [ -d $f ]
+if [ -d $f ]   # -d= directory
 then
 cd "$f"
 project_name=$( basename "$PWD" )
@@ -19,3 +21,4 @@ project_name=$( basename "$PWD" )
   fi
 fi
 done
+
