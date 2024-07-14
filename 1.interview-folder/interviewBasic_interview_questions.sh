@@ -422,7 +422,12 @@ length=${#string} # Output: 13
 • Replace substring:
 new_string=${string/World/Universe} # Output: Hello,
 Universe!
+
+
+=======================================================================================
+
 1. Scenario: Monitoring Disk Usage
+
 Question: How would you write a shell script to monitor disk usage and send an email alert
 if usage exceeds 90%?
 Answer:
@@ -438,11 +443,15 @@ echo "Running out of space \"$partition ($usage%)\"" |
 mail -s "Disk Space Alert: $partition ($usage%)" $EMAIL
 fi
 done
-Explanation:
-• df -h: Get disk usage in human-readable format.
-• grep -vE '^Filesystem|tmpfs|cdrom': Exclude certain filesystems.
-• awk '{ print $5 " " $1 }': Print usage and partition.
-• Loop through each line and check if usage exceeds threshold, then send an email.
+
+# Explanation:
+# • df -h: Get disk usage in human-readable format.
+# • grep -vE '^Filesystem|tmpfs|cdrom': Exclude certain filesystems.
+# • awk '{ print $5 " " $1 }': Print usage and partition.
+# • Loop through each line and check if usage exceeds threshold, then send an email.
+
+======================================================
+
 2. Scenario: Backup and Clean-up Logs
 Question: Write a shell script to backup log files from /var/log to /backup/logs and
 delete log files older than 7 days.
