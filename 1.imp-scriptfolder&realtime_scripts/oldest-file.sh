@@ -11,9 +11,13 @@ fi
 
 # Find the oldest file
 oldest_file=$(find "$dir" -type f -printf '%T+ %p\n' | sort | head -n 1 | awk '{print $2}')
+#  The string '%T+ %p\n' is a format string that tells find how to print each file it finds.
+# %T+: This prints the last modification time of the file in a specific format. %T+ formats the time as YYYY-MM-DD+HH:MM:SS. For example, 2024-06-28+12:34:56.
+# %p: This prints the file's path.
+# \n: This prints a newline character, ensuring each file is printed on a new line.
 
 # Check if we found any file
-if [ -z "$oldest_file" ]; then
+if [ -z "$oldest_file" ]; then  #-if [ -z "$my_var" ]: This checks if my_var is empty.The -z flag returns true if the string has a length of zero.
     echo "No files found in the directory $dir."
 else
     echo "The oldest file is: $oldest_file"
