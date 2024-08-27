@@ -22,7 +22,7 @@ if [ -z "$oldest_file" ]; then  #-if [ -z "$my_var" ]: This checks if my_var is 
 else
     echo "The oldest file is: $oldest_file"
 fi
-
+ 
 
 # Explanation:
 # Replace path/to/your/directory with the actual path of the directory you want to search.
